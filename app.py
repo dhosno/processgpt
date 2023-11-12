@@ -1,4 +1,5 @@
 import openai
+from openai import OpenAI
 import re
 import streamlit as st
 from prompts import get_system_prompt
@@ -37,12 +38,13 @@ if st.session_state.messages[-1]["role"] != "assistant":
         response = ""
         resp_container = st.empty()
 
-        for delta in openai.ChatCompletion.create(
+        client = OpenAI()
+        for part in client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
             stream=True,
         ):
-            response += delta.choices[0].delta.get("content", "")
+            response += part.choices[0].delta.content or ""
             resp_container.markdown(response)
 
         message = {"role": "assistant", "content": response}
