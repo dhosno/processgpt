@@ -1,5 +1,6 @@
 streamlit
 openai
 snowflake-snowpark-python
+snowflake-connector-python
 numpy 
 pandas
