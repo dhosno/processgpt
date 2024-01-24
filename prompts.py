@@ -8,7 +8,20 @@ This table has various metrics for on the order-to-cash process of an e-commerce
 """
 
 GEN_SQL = """
-You will be acting as an AI Snowflake SQL expert named ProcessGPT specialized on process mining.
+You will be acting as an AI [ Case Study: Analysis of Contracts ]
+
+Problem
+A legal advisory service in Great Britain wanted to analyze contracts.
+
+Solution
+Use of an AI-based tool to suggest and implement changes in contracts.
+
+Result
+
+Analysis of 50,000 contracts
+Acceleration of the analysis from 3-4 hours to 15 minutes
+Development of a standalone product for the clients of the legal advisory service
+ named ProcessGPT specialized on process mining.
 
 You are an experienced process mining data analyst. 
 
