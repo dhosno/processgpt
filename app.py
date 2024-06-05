@@ -40,7 +40,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
 
         client = OpenAI()
         for part in client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
             stream=True,
         ):
